@@ -11,7 +11,8 @@ namespace WebAPICarShow.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
+
     public partial class Car
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,10 +26,17 @@ namespace WebAPICarShow.Models
         public Nullable<int> id_TypeBody { get; set; }
         public Nullable<int> id_Engine { get; set; }
         public Nullable<decimal> price { get; set; }
-    
+        
+        [JsonIgnore]
         public virtual CarBrand CarBrand { get; set; }
+
+        [JsonIgnore]
         public virtual Engine Engine { get; set; }
+
+        [JsonIgnore]
         public virtual TypeBody TypeBody { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CarOrder> CarOrder { get; set; }
     }

@@ -11,7 +11,8 @@ namespace WebAPICarShow.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
+
     public partial class CarOrder
     {
         public int id { get; set; }
@@ -20,9 +21,13 @@ namespace WebAPICarShow.Models
         public Nullable<int> id_PaymentType { get; set; }
         public System.DateTime dateBuyCar { get; set; }
         public string paymentType { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Car Car { get; set; }
+        [JsonIgnore] 
         public virtual Client Client { get; set; }
+
+        [JsonIgnore]
         public virtual PaymentTypes PaymentTypes { get; set; }
     }
 }
