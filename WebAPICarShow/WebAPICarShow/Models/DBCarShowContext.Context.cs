@@ -16,22 +16,24 @@ namespace WebAPICarShow.Models
     public partial class DBCarShowEntities : DbContext
     {
         public DBCarShowEntities()
+            //: base("name=DBCarShowEntities")
             : base("name=DBCarShowEntities")
+            //: base("Server=tcp:taraskinnv.database.windows.net,1433;Initial Catalog=DBCarShow;Persist Security Info=False;User ID=taraskin;Password=3162022058Inter;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
         {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Car> Car { get; set; }
-        public virtual DbSet<CarBrand> CarBrand { get; set; }
-        public virtual DbSet<CarOrder> CarOrder { get; set; }
-        public virtual DbSet<Client> Client { get; set; }
-        public virtual DbSet<Engine> Engine { get; set; }
-        public virtual DbSet<ModelCar> ModelCar { get; set; }
-        public virtual DbSet<PaymentTypes> PaymentTypes { get; set; }
-        public virtual DbSet<TypeBody> TypeBody { get; set; }
+        public  DbSet<Car> Car { get; set; }
+        public  DbSet<CarBrand> CarBrand { get; set; }
+        public  DbSet<CarOrder> CarOrder { get; set; }
+        public  DbSet<Client> Client { get; set; }
+        public  DbSet<Engine> Engine { get; set; }
+        public  DbSet<ModelCar> ModelCar { get; set; }
+        public  DbSet<PaymentTypes> PaymentTypes { get; set; }
+        public  DbSet<TypeBody> TypeBody { get; set; }
     }
 }

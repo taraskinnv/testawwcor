@@ -11,7 +11,7 @@ namespace WebAPICarShow
         {
             // Web API configuration and services
             config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
             // Web API routes
             config.MapHttpAttributeRoutes();
 

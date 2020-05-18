@@ -19,7 +19,7 @@ namespace WebAPICarShow.Controllers
         // GET: api/Cars
         public IQueryable<Car> GetCar()
         {
-            return db.Car;
+            return  db.Car;
         }
 
         // GET: api/Cars/5
