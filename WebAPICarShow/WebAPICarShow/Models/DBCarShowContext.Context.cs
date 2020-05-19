@@ -17,6 +17,7 @@ namespace WebAPICarShow.Models
     {
         public DBCarShowEntities()
             //: base("name=DBCarShowEntities")
+            //: base("name=DBCarShowEntities")
             : base("name=DBCarShowEntities")
             //: base("Server=tcp:taraskinnv.database.windows.net,1433;Initial Catalog=DBCarShow;Persist Security Info=False;User ID=taraskin;Password=3162022058Inter;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
         {
